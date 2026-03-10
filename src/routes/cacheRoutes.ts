@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { deleteCache, cacheStatus } from '../controllers/cacheController';
+import { clearCache, getCacheStatus } from '../controllers/cacheController';
 
-const router = Router();
+const router: Router = Router(); // Add explicit type
 
-router.delete('/', deleteCache);
-router.get('/status', cacheStatus);
+router.delete('/', clearCache);
+router.get('/status', getCacheStatus);
 
 export default router;
